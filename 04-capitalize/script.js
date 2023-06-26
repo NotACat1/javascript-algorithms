@@ -7,9 +7,10 @@
 */
 
 function capitalize(str) {
-    // Напишите код здесь
+  console.log(str.split(' '));
+  return str.split(' ').map((word) => word.length !== 0 ? word[0].toUpperCase() + word.slice(1) : '').join(' ');
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
-console.log(capitalize('молодость всё простит')); // "Молодость Всё Простит"
+console.log(capitalize('молодость  всё  простит')); // "Молодость Всё Простит"
