@@ -8,8 +8,13 @@
 */
 
 function factorial(n) {
-    // Напишите код здесь
+  for (let i = factorialNumbers.length; i <= n; i++) {
+    factorialNumbers.push(factorialNumbers[i - 1] * i);
+  }
+  return factorialNumbers[n];
 }
+
+const factorialNumbers = [1];
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
