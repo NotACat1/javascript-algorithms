@@ -9,7 +9,11 @@
 */
 
 function anagram(str1, str2) {
-    // Напишите код здесь
+  return sortLettersWord(str1) === sortLettersWord(str2);
+}
+
+function sortLettersWord(str) {
+  return str.toLowerCase().split('').sort().join('');
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
