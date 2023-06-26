@@ -9,8 +9,7 @@
 */
 
 function reverseWords(str) {
-  const newStr = str.trim().replace(/[^a-zA-Zа-яА-Я ]+/g, ''); // удаление пробелов в начале или конце строки + избавление в строке от знаков припинания
-  return newStr.split(' ').reverse().join(' ');
+  return str.trim().replace(/[^a-zA-Zа-яА-Я ]+/g, '').split(' ').reverse().join(' ');
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
