@@ -9,8 +9,15 @@
 */
 
 function fibonacci(n) {
-    // Напишите код здесь
+  let indexNumber = arrFibonacci.length;
+  while (n > arrFibonacci.length) {
+    arrFibonacci.push(arrFibonacci[indexNumber - 2] + arrFibonacci[indexNumber - 1]);
+    indexNumber++;
+  }
+  return arrFibonacci[n - 1];
 }
+
+const arrFibonacci = [0, 1];
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
