@@ -7,8 +7,46 @@
 */
 
 function primes(num) {
-    // Напишите код здесь
+  for (let item = arrPrimes[arrPrimes.length - 1] + 1; num >= item; item++) {
+    if (isPrime(item)) arrPrimes.push(item);
+  }
+  let index = 0;
+  while (num >= arrPrimes[index]) {
+    index++;
+  }
+  return arrPrimes.slice(0, index);
 }
+
+// Информация: https://ru.wikipedia.org/wiki/Тест_Соловея_—_Штрассена
+function isPrime(n) {
+  if (n < 2) return false;
+  if (n === 2) return true;
+  const k = 4;
+  for (let i = 0; i < k; i++) {
+    let a = Math.floor(Math.random() * (n - 2)) + 2;
+    if (GCD(a, n) !== 1 || powModular(a, n - 1, n) !== 1) return false;
+  }  
+  return true;
+}
+
+// Быстрое возведение в степень по модулю
+// Информация: https://ru.wikipedia.org/wiki/Возведение_в_степень_по_модулю
+function powModular(base, index, modulus) {
+	let c = 1;
+  for (let i = 1; i <= index; i++) {
+    c = (c * base) % modulus;
+  }
+  return c;
+}
+
+// Нахождение НОД
+// Информация: https://ru.wikipedia.org/wiki/Алгоритм_Евклида
+function GCD(a, b) {
+  if (b === 0) return a;
+  return GCD(b, a % b);
+}
+
+const arrPrimes = [2, 3, 5, 7];
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
