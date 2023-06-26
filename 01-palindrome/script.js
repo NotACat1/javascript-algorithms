@@ -14,7 +14,15 @@
 */
 
 function palindrome(str) {
-    // Напишите код здесь
+    const checkStr = str.toLowerCase().replace(/[^a-zа-я]+/g, ''); // перевод в нижний регистр + избавление в строке от пробелов и знаков припинания
+    let leftBorder = 0; // индекс левого символа
+    let rightBorder = checkStr.length - 1; // индекс правого символа
+    while (leftBorder <= rightBorder) {
+      if (checkStr[leftBorder] != checkStr[rightBorder]) return false;
+      leftBorder++;
+      rightBorder--;
+    }
+    return true;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
