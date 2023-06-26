@@ -9,9 +9,35 @@
  * если n простое, и false — если нет.
 */
 
+// Информация: https://ru.wikipedia.org/wiki/Тест_Соловея_—_Штрассена
 function isPrime(n) {
-    // Напишите код здесь
+  if (n < 2) return false;
+  if (n === 2) return true;
+  const k = 4;
+  for (let i = 0; i < k; i++) {
+    let a = Math.floor(Math.random() * (n - 2)) + 2;
+    if (GCD(a, n) !== 1 || powModular(a, n - 1, n) !== 1) return false;
+  }  
+  return true;
 }
+
+// Быстрое возведение в степень по модулю
+// Информация: https://ru.wikipedia.org/wiki/Возведение_в_степень_по_модулю
+function powModular(base, index, modulus) {
+	let c = 1;
+  for (let i = 1; i <= index; i++) {
+    c = (c * base) % modulus;
+  }
+  return c;
+}
+
+// Нахождение НОД
+// Информация: https://ru.wikipedia.org/wiki/Алгоритм_Евклида
+function GCD(a, b) {
+  if (b === 0) return a;
+  return GCD(b, a % b);
+}
+
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
