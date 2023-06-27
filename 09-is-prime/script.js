@@ -43,7 +43,6 @@ function randomIntNumber(min, max) {
   return Math.floor(min + Math.random() * (max + 1 - min));
 }
 
-
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
 console.log(isPrime(0)); // false
