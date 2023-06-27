@@ -17,13 +17,13 @@ function primes(num) {
   return arrPrimes.slice(0, indexArrPrimes);
 }
 
-// Информация: https://ru.wikipedia.org/wiki/Тест_Соловея_—_Штрассена
+// Тест Ферма
 function isPrime(n) {
   if (n < 2) return false;
   if (n === 2) return true;
   const k = 4;
   for (let i = 0; i < k; i++) {
-    let a = Math.floor(Math.random() * (n - 2)) + 2;
+    let a = randomIntNumber(2, n - 2);
     if (GCD(a, n) !== 1 || powModular(a, n - 1, n) !== 1) return false;
   }  
   return true;
@@ -44,6 +44,11 @@ function powModular(base, index, modulus) {
 function GCD(a, b) {
   if (b === 0) return a;
   return GCD(b, a % b);
+}
+
+// Случайное целое число в интервале от min до max
+function randomIntNumber(min, max) {
+  return Math.floor(min + Math.random() * (max + 1 - min));
 }
 
 const arrPrimes = [2, 3, 5, 7];
