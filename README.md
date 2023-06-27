@@ -179,7 +179,7 @@ function isPrime(n) {
 // Быстрое возведение в степень по модулю
 // Информация: https://ru.wikipedia.org/wiki/Возведение_в_степень_по_модулю
 function powModular(base, index, modulus) {
-	let c = 1;
+  let c = 1;
   for (let i = 1; i <= index; i++) {
     c = (c * base) % modulus;
   }
