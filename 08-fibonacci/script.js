@@ -9,10 +9,10 @@
 */
 
 function fibonacci(n) {
-  let indexNumber = arrFibonacci.length;
+  let maxArrFibonacci = arrFibonacci.length;
   while (n > arrFibonacci.length) {
-    arrFibonacci.push(arrFibonacci[indexNumber - 2] + arrFibonacci[indexNumber - 1]);
-    indexNumber++;
+    arrFibonacci.push(arrFibonacci[maxArrFibonacci - 2] + arrFibonacci[maxArrFibonacci - 1]);
+    maxArrFibonacci++;
   }
   return arrFibonacci[n - 1];
 }

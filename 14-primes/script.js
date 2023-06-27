@@ -7,14 +7,14 @@
 */
 
 function primes(num) {
-  for (let item = arrPrimes[arrPrimes.length - 1] + 1; num >= item; item++) {
-    if (isPrime(item)) arrPrimes.push(item);
+  for (let number = arrPrimes[arrPrimes.length - 1] + 1; num >= number; number++) {
+    if (isPrime(number)) arrPrimes.push(number);
   }
-  let index = 0;
-  while (num >= arrPrimes[index]) {
-    index++;
+  let indexArrPrimes = 0;
+  while (num >= arrPrimes[indexArrPrimes]) {
+    indexArrPrimes++;
   }
-  return arrPrimes.slice(0, index);
+  return arrPrimes.slice(0, indexArrPrimes);
 }
 
 // Информация: https://ru.wikipedia.org/wiki/Тест_Соловея_—_Штрассена

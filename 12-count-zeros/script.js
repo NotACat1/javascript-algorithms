@@ -7,11 +7,11 @@
 */
 
 function countZeros(n) {
-  let rez = 0;
-  for (let item = 10; item <= n; item++) {
-    rez += (item + '').replace(/[1-9]+/g, '').length;
+  let colZeros = 0;
+  for (let number = 10; number <= n; number++) {
+    colZeros += (number + '').replace(/[1-9]+/g, '').length;
   }
-  return rez;
+  return colZeros;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

@@ -11,11 +11,11 @@
 */
 
 function fizzBuzz(num) {
-  for (let item = 1; item <= num; item++) {
-    let str = '';
-    if (item % 3 === 0) str += 'fizz';
-    if (item % 5 === 0) str += 'buzz';
-    console.log(str || item);
+  for (let itemNumber = 1; itemNumber <= num; itemNumber++) {
+    let strRez = '';
+    if (itemNumber % 3 === 0) strRez += 'fizz';
+    if (itemNumber % 5 === 0) strRez += 'buzz';
+    console.log(strRez || itemNumber);
   }
 }
 

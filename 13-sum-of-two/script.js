@@ -9,13 +9,13 @@
 */
 
 function sumOfTwo(arr, sum) {
-  let i = 0;
-  let flg = false;
-  while (Math.ceil(arr.length / 2) >= i && !flg) {
-    flg = arr.includes(sum - arr[i], i);
-    i++;
+  let indexArr = 0;
+  let flgFunct = false;
+  while (Math.ceil(arr.length / 2) >= indexArr && !flgFunct) {
+    flgFunct = arr.includes(sum - arr[indexArr], indexArr);
+    indexArr++;
   }
-  return flg;
+  return flgFunct;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

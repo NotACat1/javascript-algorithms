@@ -7,8 +7,7 @@
 */
 
 function capitalize(str) {
-  console.log(str.split(' '));
-  return str.split(' ').map((word) => word.length !== 0 ? word[0].toUpperCase() + word.slice(1) : '').join(' ');
+  return str.split(' ').map((wordStr) => wordStr.length !== 0 ? wordStr[0].toUpperCase() + wordStr.slice(1) : '').join(' ');
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

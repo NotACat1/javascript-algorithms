@@ -8,7 +8,7 @@
 */
 
 function uniq(arr) {
-  return arr.filter((number, index, selfArr) => index === selfArr.indexOf(number));
+  return arr.filter((numberArr, indexNumberArr, selfArr) => indexNumberArr === selfArr.indexOf(numberArr));
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
